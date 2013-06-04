@@ -31,16 +31,17 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 		require_once __DIR__ . '/vendor' . '/rb.php';
 		//Get DB configs from app/config/database.php
 		$db_type = Laravel\Config::get('database.default');
-		$db_host = Laravel\Config::get('database.connections.'.$db_type.'host');
-		$db_user = Laravel\Config::get('database.connections.'.$db_type.'username'); 
-		$db_pass = Laravel\Config::get('database.connections.'.$db_type.'password');
-		$db_name = Laravel\Config::get('database.connections.'.$db_type.'database');
+		$conn = Laravel\Config::get('database.connections');
+		$db_host = $connections[$default]['host'];
+		$db_user = $connections[$default]['username']; 
+		$db_pass = $connections[$default]['password'];
+		$db_name = $connections[$default]['database'];
 
 		//Run the R::setup command based on db_type
 		if ($db_type != 'sqlite') {
-			R::setup("'{$db_type}:host={$db_host};dbname={$db_name}','{$db_user}',{$db_pass}");
+			R::setup("'".$db_type.":host=."$db_host.";dbname=".$db_name."','".$db_user."','".$db_pass."'");
 		} else {
-			R::setup("'{$db_type}:{$db_name}','{$db_user}','{$db_pass}'");
+			R::setup("'".$db_type.":".$db_name."','".$db_user."','".$db_pass."'");
 		}
 	}
 
