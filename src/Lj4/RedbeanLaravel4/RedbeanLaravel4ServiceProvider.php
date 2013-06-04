@@ -36,8 +36,8 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 		$db_user = $connections[$default]['username']; 
 		$db_pass = $connections[$default]['password'];
 		$db_name = $connections[$default]['database'];
-		Log::error($default);
-		Log::error($connections);
+		Log::error(print_r($default);
+		Log::error(print_r($connections);
 		//Run the R::setup command based on db_type
 		if ($default != 'sqlite') {
 			R::setup("'".$default.":host=".$db_host.";dbname=".$db_name."','".$db_user."','".$db_pass."'");
