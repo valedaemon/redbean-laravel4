@@ -39,7 +39,7 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 
 		//Run the R::setup command based on db_type
 		if ($db_type != 'sqlite') {
-			R::setup("'".$db_type.":host=."$db_host.";dbname=".$db_name."','".$db_user."','".$db_pass."'");
+			R::setup("'".$db_type.":host=".$db_host.";dbname=".$db_name."','".$db_user."','".$db_pass."'");
 		} else {
 			R::setup("'".$db_type.":".$db_name."','".$db_user."','".$db_pass."'");
 		}
