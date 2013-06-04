@@ -1,6 +1,6 @@
 <?php namespace Lj4\RedbeanLaravel4;
 
-use Illuminate\Support\ServiceProvider, R, Illuminate\Support\Facades as Laravel;
+use Illuminate\Support\ServiceProvider, R, Illuminate\Support\Facades as Laravel, Illuminate\Support\Facades\Log as Log;
 
 class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 
@@ -36,7 +36,8 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 		$db_user = $connections[$default]['username']; 
 		$db_pass = $connections[$default]['password'];
 		$db_name = $connections[$default]['database'];
-
+		Log::error($default);
+		Log::error($connections);
 		//Run the R::setup command based on db_type
 		if ($default != 'sqlite') {
 			R::setup("'".$default.":host=".$db_host.";dbname=".$db_name."','".$db_user."','".$db_pass."'");
