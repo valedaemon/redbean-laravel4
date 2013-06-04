@@ -31,7 +31,7 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 		require_once __DIR__ . '/vendor' . '/rb.php';
 		//Get DB configs from app/config/database.php
 		$db_type = Laravel\Config::get('database.default');
-		$conn = Laravel\Config::get('database.connections');
+		$connections = Laravel\Config::get('database.connections');
 		$db_host = $connections[$default]['host'];
 		$db_user = $connections[$default]['username']; 
 		$db_pass = $connections[$default]['password'];
