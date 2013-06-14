@@ -1,6 +1,6 @@
 <?php namespace Lj4\RedbeanLaravel4;
 
-use Illuminate\Support\ServiceProvider, R, Illuminate\Support\Facades as Laravel, Illuminate\Support\Facades\Log as Log;
+use Illuminate\Support\ServiceProvider, Redbean\R, Illuminate\Support\Facades as Laravel, Illuminate\Support\Facades\Log as Log;
 
 class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 
@@ -28,7 +28,6 @@ class RedbeanLaravel4ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		require_once __DIR__ . '/vendor' . '/rb.php';
 		//Get DB configs from app/config/database.php
 		$default = Laravel\Config::get('database.default');
 		$connections = Laravel\Config::get('database.connections');
