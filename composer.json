@@ -1,13 +1,14 @@
 {
     "name": "lj4/redbean-laravel4",
-    "description": "An implementation of RedBean for Laravel 4. Although Redbean has a composer install option, it is not recommended. This solves the problem.",
-    "version": "1.0.0-dev",
+    "description": "An implementation of RedBean for Laravel 4. Although Redbean has a composer install option, it is not recommended. This solution also implements namespaces for Redbean.",
+    "version": "1.1",
     "authors": [
         {
-            "name": "lj4",
+            "name": "Thomas Johnson",
             "email": "tijohnsonjr@post.harvard.edu"
         }
     ],
+    "license": "MIT",
     "require": {
         "php": ">=5.3.0"
     },
