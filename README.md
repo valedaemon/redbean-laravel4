@@ -1,6 +1,6 @@
 # The Redbean Implementation for Laravel 4
 
-[Redbean PHP] (http://redbeanphp.com) is an ORM solution for PHP extremely easy to use, flexible in its execution, and powerful in its results. 
+[Redbean PHP] (http://redbeanphp.com) is an ORM solution for PHP which is extremely easy to use, flexible in its execution, and powerful in its results. 
 
 This composer package enables RedbeanPHP for Laravel 4. 
 
