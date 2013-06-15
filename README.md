@@ -9,7 +9,7 @@ This composer package enables RedbeanPHP for Laravel 4.
 Installation is easy. In your composer.json file, add
 
 ```json
-"lj4/redbean-laravel4": "*"
+"lj4/redbean-laravel4": "dev-master"
 ```
 
 in your "require" section. Then, in app/config/app.php, add 
